@@ -2,6 +2,8 @@
 
 This project is an API that connects to the GitHub API to fetch and display your GitHub activity log. It provides endpoints to retrieve general GitHub profile data, repository details, and create issues in repositories. The API is deployed online and can be integrated into your portfolio website at the `/github` route.
 
+**Live API:** [GitHub API Integration](https://github-api-integration-pw0q.onrender.com)
+
 ## Features
 
 - Fetch GitHub profile details such as followers, following, and repositories.
