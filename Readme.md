@@ -12,15 +12,17 @@ This project is an API that connects to the GitHub API to fetch and display your
 
 ### 1. Get GitHub Profile Data
 **Endpoint:** `GET /github`  
-**Response Example:**
+**Description:** Retrieves basic profile details including followers, following, and a list of repositories.
+
+#### Response Example:
 ```json
 {
-    "username": "your-github-username",
+  "username": "your-github-username",
   "followers": 150,
   "following": 50,
   "repositories": [
-      {
-          "name": "project-1",
+    {
+      "name": "project-1",
       "url": "https://github.com/your-github-username/project-1"
     },
     {
@@ -29,11 +31,16 @@ This project is an API that connects to the GitHub API to fetch and display your
     }
   ]
 }
+```
 
-### 1. Get Repository Details
-**Endpoint:** `GET /github/{repo-name}`
-**Response Example:**
+---
 
+### 2. Get Repository Details
+**Endpoint:** `GET /github/{repo-name}`  
+**Description:** Retrieves details about a specific repository, including stars, forks, and open issues.
+
+#### Response Example:
+```json
 {
   "repository": "project-1",
   "description": "A sample project",
@@ -42,18 +49,26 @@ This project is an API that connects to the GitHub API to fetch and display your
   "issues": 5,
   "url": "https://github.com/your-github-username/project-1"
 }
+```
 
-### 1. Create an Issue in a Repository
-**Endpoint:** `POST /github/{repo-name}/issues`
-**Request Body Example:**
+---
 
+### 3. Create an Issue in a Repository
+**Endpoint:** `POST /github/{repo-name}/issues`  
+**Description:** Creates a new issue in the specified repository by providing a title and description.
+
+#### Request Body Example:
+```json
 {
   "title": "Bug found in feature X",
   "body": "Detailed description of the issue..."
 }
+```
 
-**Request Example:**
-
+#### Response Example:
+```json
 {
   "issue_url": "https://github.com/your-github-username/project-1/issues/1"
 }
+```
+
